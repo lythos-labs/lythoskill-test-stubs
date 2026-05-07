@@ -38,12 +38,13 @@ Note: name collides with the real `web-search` skill in `vercel-labs/agent-skill
 
 Don't consume for real work.
 
-## Real-world peers (as of 2026-05-07)
+## Real-world peers (as of 2026-05-07, fact-checked via GitHub API)
 
 Skills with **monorepo `skills/` layout** observed in the wild:
 
-- [`anthropics/skills/skills/pdf`](https://github.com/anthropics/skills) — flagship example, 68k+ stars
-- [`vercel-labs/agent-skills/skills/web-search`](https://github.com/vercel-labs/agent-skills) — similarly named real skill (do not confuse with this stub — different FQ locator)
-- [`vercel-labs/agent-skills/skills/composition-patterns`](https://github.com/vercel-labs/agent-skills) — same parent repo, multiple skills under `skills/`
+- [`anthropics/skills/skills/pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf) — **flagship `skills/skills/` example**. The parent repo is literally named `skills`, and inside it there's a `skills/` subdir holding 15+ real skills (pdf, docx, pptx, claude-api, mcp-builder, ...). The FQ locator therefore has TWO consecutive `skills/` segments. **Looks counter-intuitive but is real** — any resolver that "smartly drops a `skills/`" would mis-resolve here. FQ-only enforcement preserves this fidelity. (68k+ stars on parent repo)
+- [`vercel-labs/agent-skills/skills/react-best-practices`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) — same monorepo pattern, parent repo named `agent-skills` so no double-`skills/` here. Real skills include `composition-patterns`, `deploy-to-vercel`, `react-best-practices`, `react-native-skills`, `react-view-transitions`, `vercel-cli-with-tokens`, `web-design-guidelines`. (Note: there is **no `web-search` skill** in this repo as of 2026-05-07 — this stub's name is BDD-historical.)
 
-Cross-reference: [skill-repo-structure-survey wiki](https://github.com/lythos-labs/lythoskill/blob/main/cortex/wiki/03-lessons/2026-05-07-real-world-skill-repo-structure-survey.md) — this stub's layout is the most common pattern (~3 of 9 surveyed real-world repos).
+Cross-reference: [skill-repo-structure-survey wiki](https://github.com/lythos-labs/lythoskill/blob/main/cortex/wiki/03-lessons/2026-05-07-real-world-skill-repo-structure-survey.md). The monorepo `skills/` layout is the most common surveyed pattern.
+
+Don't consume for real work.

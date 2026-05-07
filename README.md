@@ -46,6 +46,19 @@ Each stub's `SKILL.md` body contains the **canonical FQ locator that should have
 
 Each stub also includes a **`## Real-world peers (as of 2026-05-07)` section** linking to community skills that share the same layout — turning each stub into an evergreen reference card for "what real-world repos look like this".
 
+## The `skills/skills/` reality check
+
+The most counter-intuitive layout in the wild: [`anthropics/skills/skills/pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf). Parsing:
+
+- `host`: `github.com`
+- `owner`: `anthropics`
+- `repo`: `skills`  ← **the repo is literally named `skills`**
+- `skill`: `skills/pdf` ← **the skill subpath also starts with `skills/` because the repo's organizational subdir is conventionally named `skills/`**
+
+→ FQ locator: `github.com/anthropics/skills/skills/pdf`. **Two consecutive `skills/` segments are correct.**
+
+This pattern was the temptation behind earlier "let's add an implicit `skills/` insertion or smart-drop heuristic" thoughts — both directions are wrong, because they break this layout in opposite ways. The only correct policy is FQ-only (per [`ADR-20260502012643244`](https://github.com/lythos-labs/lythoskill/blob/main/cortex/adr/01-proposed/ADR-20260502012643244-fq-only-locator-no-bare-name-resolution.md)): the locator declares the path verbatim, no insertion, no normalization. The stub `skills/web-search/SKILL.md` here documents this pattern in its `Real-world peers` section with the live `anthropics/skills/skills/pdf` reference.
+
 ## For ecosystem contributors
 
 If you maintain a skill repo with a layout NOT covered here, please consider opening a PR adding a stub for your shape. The criteria:
