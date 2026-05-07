@@ -70,6 +70,25 @@ If you maintain a skill repo with a layout NOT covered here, please consider ope
 
 The goal is to keep this repo's stubs as a living taxonomy of real-world skill layouts.
 
+### GitHub URL vs FQ locator (don't paste the URL!)
+
+When citing a real-world peer, the GitHub browser URL is **not** the FQ locator — there's an extra `tree/<branch>/` segment:
+
+| Form | Example |
+|------|---------|
+| GitHub browser URL (what you copy from address bar) | `https://github.com/anthropics/skills/tree/main/skills/pdf` |
+| FQ locator (what `lythos/skill-deck` consumes) | `github.com/anthropics/skills/skills/pdf` |
+
+Translation rule: **drop `https://`, drop `tree/<branch>/`**. The result is a verbatim path that `parseLocator` can ingest. If you accidentally embed the GitHub URL form into a deck.toml, FQ-only enforcement will reject it (`tree` and the branch name are not part of the path semantics).
+
+When listing peers in stub bodies, use **markdown link form** so readers see both:
+
+```markdown
+[`anthropics/skills/skills/pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf)
+```
+
+The link text is the FQ locator (canonical, copyable into deck.toml); the URL is the browser-clickable target.
+
 ## License
 
 MIT. The stubs are inert and unconsumable, but the metadata/frontmatter forms can be referenced freely.
