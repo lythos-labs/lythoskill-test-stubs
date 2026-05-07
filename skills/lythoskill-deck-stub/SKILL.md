@@ -25,3 +25,9 @@ The real `@lythos/skill-deck` ships as a skill product at `github.com/lythos-lab
 **Monorepo with `skills/` prefix**, same as `skills/web-search/`. This stub is used in BDD scenarios that previously referenced bare `lythoskill-deck` — those should now reference this FQ form.
 
 Don't consume.
+
+## Real-world peers (as of 2026-05-07)
+
+Same monorepo `skills/` layout family as `skills/web-search/`. The closest real-world counterpart is the actual `@lythos/skill-deck` published from `lythos-labs/lythoskill/skills/lythoskill-deck` — but **that's a different FQ locator**, and FQ-only enforcement keeps them distinct.
+
+See `skills/web-search/SKILL.md` for additional peers in the same layout family.

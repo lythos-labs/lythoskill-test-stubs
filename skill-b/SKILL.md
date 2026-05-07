@@ -23,3 +23,7 @@ If you arrived via any other path string, **your resolver has a bug** — file a
 **Flat** — top-level subdir, same shape as `skill-a/`. Used in BDD scenarios that need two distinct flat-layout stubs (e.g., basic-link, deny-by-default).
 
 This stub serves no consumable purpose. Don't `deck add` for real work.
+
+## Real-world peers (as of 2026-05-07)
+
+Same flat-layout family as `skill-a/`. See `skill-a/SKILL.md` for the full peer list.

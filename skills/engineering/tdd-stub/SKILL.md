@@ -35,3 +35,11 @@ If you arrived via:
 This stub is named `-stub` to keep it distinct from the real `tdd` skill in mattpocock/skills.
 
 Don't consume.
+
+## Real-world peers (as of 2026-05-07)
+
+The **nested category** layout is rarer than flat or monorepo, but the canonical example is:
+
+- [`mattpocock/skills/skills/engineering/tdd`](https://github.com/mattpocock/skills) — the real `tdd` skill (don't confuse with this stub — different FQ locator). Same author has multiple skills nested under `skills/<category>/<skill>/`, e.g., `skills/engineering/diagnose`, etc.
+
+Cross-reference: [skill-repo-structure-survey wiki](https://github.com/lythos-labs/lythoskill/blob/main/cortex/wiki/03-lessons/2026-05-07-real-world-skill-repo-structure-survey.md) — only 1 of 9 surveyed real-world repos uses this nested style. As more authors organize skills by category, this layout may grow.

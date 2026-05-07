@@ -29,3 +29,13 @@ If you arrived via any other path string — bare `skill-a`, shorthand `lythos-l
 ```
 
 This stub serves no consumable purpose. Don't `deck add` for real work.
+
+## Real-world peers (as of 2026-05-07)
+
+Skills with similar **flat layout** observed in the wild:
+
+- [`daymade/claude-code-skills/skill-creator`](https://github.com/daymade/claude-code-skills) — popular flat-layout skill collection (5.2k+ stars on parent repo)
+- [`opensite-ai/opensite-skills/agent-file-engine`](https://github.com/opensite-ai/opensite-skills) — flat-layout skill collection
+- [`alirezarezvani/claude-skills/engineering`](https://github.com/alirezarezvani/claude-skills) — flat-layout, 5.2k+ stars
+
+Cross-reference: [skill-repo-structure-survey wiki](https://github.com/lythos-labs/lythoskill/blob/main/cortex/wiki/03-lessons/2026-05-07-real-world-skill-repo-structure-survey.md) — this stub's layout shape is shared by ~3 of 9 surveyed real-world repos.
