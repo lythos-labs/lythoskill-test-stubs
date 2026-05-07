@@ -3,6 +3,12 @@
 > Empty-content stub skills for `lythos-labs/lythoskill` BDD test fixtures, **doubling as a field survey of skill ecosystem layout patterns**.
 > Not consumable. Don't `deck add` these except for testing.
 
+## If you got here lost
+
+If you tried `git clone` on someone's skill repo and couldn't find `SKILL.md` — or you found it but weren't sure which path to put in your `skill-deck.toml` — **this repo is your atlas**. Each stub here demonstrates a different real-world skill-repo layout, and the `SKILL.md` body inside each stub tells you "yes, you got here via the right FQ locator" or "your resolver has a bug, here's the canonical form".
+
+You don't need to clone this repo to use it — just browse the directory tree and read each stub's `SKILL.md` body. The path you reached it via is the path you should use in production.
+
 ## Why this repo exists
 
 ### Primary: BDD fixture
@@ -32,7 +38,7 @@ The stubs are intentionally laid out across the path styles surveyed:
 | `skills/engineering/tdd-stub/` | Nested category (mattpocock/skills style) | `github.com/lythos-labs/lythoskill-test-stubs/skills/engineering/tdd-stub` |
 | `architecture-diagram-stub/inner-stub/` | Arbitrary subdir (Cocoon-AI style) | `github.com/lythos-labs/lythoskill-test-stubs/architecture-diagram-stub/inner-stub` |
 
-Standalone root-`SKILL.md` is **deliberately excluded** — that case is trivially exercised by treating the entire repo as one skill, and adding it here would conflict with this README + the multi-stub layout.
+Standalone root-`SKILL.md` is **deliberately excluded** — that case is trivially exercised by treating the entire repo as one skill, and adding it here would conflict with this README + the multi-stub layout. **Real-world example to study directly**: [`garrytan/gstack`](https://github.com/garrytan/gstack) — the SKILL.md sits at the repo root, repo-as-skill style. Structurally the simplest layout but the skill itself is non-trivial; the standalone form demonstrates that "simple layout" ≠ "simple skill".
 
 ## Self-verification pattern
 
